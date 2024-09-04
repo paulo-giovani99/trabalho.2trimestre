@@ -1,0 +1,41 @@
+<?php
+class ItemPedido {
+    private int $quantidade;
+    private float $valor;
+    private Produto $item;
+    
+    public function __construct($quantidade, $valor, $codigo, $nome)
+    {
+        $this->quantidade =$quantidade;
+        $this->valor =$valor;
+        $this->item = new Produto($codigo, $nome, $valor);   
+    }
+
+    public function getItem()
+    {
+        return $this->item;
+    }
+    public function setItem($item)
+    {
+        $this->item = $item;
+    }
+
+    public function getQuantidade()
+    {
+        return $this->quantidade;
+    }
+    public function setQuantidade($quantidade)
+    {
+        $this->quantidade = $quantidade;
+    }
+
+    public function getValor()
+    {
+        return $this->valor;
+    }
+    public function setValor($valor)
+    {
+        $this->valor = $valor;
+    }
+   
+}
